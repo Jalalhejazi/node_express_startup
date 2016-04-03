@@ -1,0 +1,51 @@
+{
+  /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration/
+   */
+  "apps" : [
+
+    // First application
+    {
+      "name"      : "myapp",
+      "script"    : "bin/www",
+      "watch"     : true,
+      "ignore_watch"      : ["[\\/\\\\]\\./", "node_modules"],
+      "instances"  : 1, 
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_prod" : {
+        "NODE_ENV": "production"
+      }
+    }
+
+    
+  ],
+
+  /**
+   * Deployment section
+   * http://pm2.keymetrics.io/docs/usage/deployment/
+   */
+  "deploy" : {
+    "production" : {
+      "user" : "jh",
+      "host" : "itacademy.dk",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:repo.git",
+      "path" : "/var/www/production",
+      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env production"
+    },
+    "dev" : {
+      "user" : "node",
+      "host" : "itacademy.dk",
+      "ref"  : "origin/master",
+      "repo" : "git@github.com:repo.git",
+      "path" : "/var/www/development",
+      "post-deploy" : "npm install && pm2 startOrRestart ecosystem.json --env dev",
+      "env"  : {
+        "NODE_ENV": "dev"
+      }
+    }
+  }
+}

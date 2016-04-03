@@ -1,0 +1,26 @@
+{
+  "name": "myapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start" :           "supervisor bin/www",
+    "debug":            "DEBUG=myapp:* npm start",
+    "forever-start":    "forever start ./bin/www  --watch",
+    "forever-stop":     "forever stop ./bin/www",
+    "pm2-start" :       "pm2 start bin/www --name myapp --instances 0 "
+    
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "hbs": "~3.1.0",
+    "morgan": "~1.6.1",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "forever": "^0.15.1",
+    "supervisor": "^0.9.1"
+  }
+}
