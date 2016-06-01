@@ -3,12 +3,11 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start" :           "supervisor bin/www",
-    "debug":            "DEBUG=myapp:* npm start",
-    "forever-start":    "forever start ./bin/www  --watch",
-    "forever-stop":     "forever stop ./bin/www",
-    "pm2-start" :       "pm2 start bin/www --name myapp --instances 0 "
-    
+    "start": "supervisor bin/www",
+    "debug": "DEBUG=myapp:* npm start",
+    "forever-start": "forever start ./bin/www  --watch",
+    "forever-stop": "forever stop ./bin/www",
+    "pm2-start": "pm2 start bin/www --name myapp --instances 0 "
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -17,7 +16,8 @@
     "express": "~4.13.1",
     "hbs": "~3.1.0",
     "morgan": "~1.6.1",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "request-promise": "~3.0.0"
   },
   "devDependencies": {
     "forever": "^0.15.1",

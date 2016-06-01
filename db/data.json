@@ -1,0 +1,10 @@
+{
+  "title": "server",
+  "productName": "MedicinApp",
+  "productTitle": "medicin title comes here...",
+  "productList":  [
+  					{"name":"xxx"} , 
+  					{"name":"yyy"} , 
+  					{"name":"zzz"} ,
+  					{"navn":"generic name .."}  ]
+}
