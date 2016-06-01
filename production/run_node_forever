@@ -1,0 +1,12 @@
+# the process used to start node is forever as service/job
+
+
+
+npm install pm2 -g
+
+
+pm2 start bin/www --name "minApp" 
+
+
+pm2 ls
+
