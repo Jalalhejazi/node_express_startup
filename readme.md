@@ -1,3 +1,8 @@
+
+## clone / download
+
+	$ git clone https://github.com/Jalalhejazi/node_express_startup.git
+
 ## setup 
 
 	$ npm install 
